@@ -25,8 +25,7 @@ iconake.exe --restore    restore the layout backed up before the last run
 iconake.exe --no-hook    poll GetAsyncKeyState instead of the global hook
 iconake.exe --no-park    leave unused icons where they are
 ```
-Requirements: Windows 10 19H1+ / Windows 11, at least 5 desktop icons,
-"Auto arrange icons" off (the program refuses politely if it's on).
+Requirements: Windows 10 19H1+ / Windows 11, at least 5 desktop icons.
 
 ## Build
 ```
@@ -46,7 +45,7 @@ clang iconake.c -o iconake.exe -Os -flto -s -ffreestanding -fno-builtin -fno-sta
 - No injection into Explorer, no cross-process `VirtualAllocEx`/`WriteProcessMemory`,
   no `LVM_*` message hacks — supported COM interfaces only.
 - The program refuses to start if it cannot write the backup first.
-- If it *is* killed mid-game, icons stay displaced until `iconake.exe --restore`.
+- If it is killed mid-game, icons stay displaced until `iconake.exe --restore`.
 
 ## Limits
 - Max 512 icons, max snake length 256.
