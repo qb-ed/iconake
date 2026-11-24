@@ -29,12 +29,9 @@ Requirements: Windows 10 19H1+ / Windows 11, at least 5 desktop icons,
 "Auto arrange icons" off (the program refuses politely if it's on).
 
 ## Build
-One file; links only kernel32, user32, ole32, winmm:
 ```
-clang -O2 -nostdlib -Wall -Wextra iconake.c -o iconake.exe ^
-      -e entry -Wl,--subsystem,windows -lkernel32 -luser32 -lole32 -lwinmm
+clang iconake.c -o iconake.exe -Os -flto -s -ffreestanding -fno-builtin -fno-stack-protector -mno-stack-arg-probe -fno-asynchronous-unwind-tables -fno-ident -ffunction-sections -fdata-sections -nostdlib -Wl,--entry,entry -Wl,--subsystem,windows -Wl,--gc-sections -lkernel32 -luser32 -lole32 -lwinmm
 ```
-Same with gcc/MinGW-w64. MSVC: `/NODEFAULTLIB /ENTRY:entry /SUBSYSTEM:WINDOWS`.
 
 ## How it works
 1. `IShellWindows::FindWindowSW(SWC_DESKTOP)` → `IServiceProvider` →
