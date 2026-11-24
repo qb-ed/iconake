@@ -4,7 +4,7 @@
 
 Pure C. One file. No CRT. Nothing but the OS itself. Tested on Windows 11.
 
-<!-- ![demo](demo.gif) — add a ScreenToGif recording here, it's worth 10x the text -->
+[demo](demo.gif)
 
 ## Features
 - Classic snake on a grid derived from your real icon spacing (`IFolderView::GetSpacing`) and work area
