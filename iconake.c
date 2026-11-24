@@ -1157,11 +1157,11 @@ void entry(void) {
     park_spares();
     render();
 
-    say_path(L"Desktop Snake\n\n"
-             L"Arrows / WASD to move. Esc to quit.\n"
-             L"Eat the wobbling icon to grow!\n\n"
-             L"Layout backup (restored on exit):\n",
-             L"\n\nIf this program is killed, run:  iconake.exe --restore", MB_ICONINFO);
+    say_path(L"Desktop Snake\nCreated by qb-ed\n\n"
+            L"Arrows / WASD to move. Esc to quit.\n"
+            L"Eat the wobbling icon to grow!\n\n"
+            L"Layout backup (restored on exit):\n",
+            L"\n\nIf this program is killed, run:  iconake.exe --restore", MB_ICONINFO);
 
     input_install();
 
@@ -1191,11 +1191,10 @@ void entry(void) {
     cleanup();
 
     if (g_restoreFailed)
-        say_path(L"Could not put the icons back (did Explorer restart?).\n"
-                 L"Your backup is still at\n", L"\nRun:  iconake.exe --restore", MB_ICONWARN);
-    else if (g_won)  say(L"You win! Desktop restored.", MB_OK);
-    else if (g_quit) say(L"Quit. Desktop restored.", MB_OK);
-    else             say(L"Game over! Desktop restored.", MB_OK);
+    say_path(L"Could not put the icons back...\n", L"\nRun:  iconake.exe --restore", MB_ICONWARN);
+    else if (g_won)  say(L"You win! Desktop restored.\n\n- Iconake by qb-ed", MB_OK);
+    else if (g_quit) say(L"Quit. Desktop restored.\n\n- Iconake by qb-ed", MB_OK);
+    else say(L"Game over! Desktop restored.\n\n- Iconake by qb-ed", MB_OK);
 
     ExitProcess(0);
 }
