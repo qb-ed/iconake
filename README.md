@@ -18,6 +18,15 @@ Pure C. One file. No CRT. Nothing but the OS itself. Tested on Windows 11.
 - CRT-free build (`-nostdlib`): tiny binary, instant start
 - Handles Win10 19H1+/Win11 desktop topology (Progman / WorkerW / SHELLDLL_DefView)
 
+## 📺 Content Creator & Showcase Policy
+You are free to feature this project in your video or streams. However, **you must not claim you wrote this software**. 
+
+**Requirements for showcasing:**
+1. You must credit "qb-ed" (pronounced "cubed") verbally or in the description.
+2. You must link to this repository in your video description.
+3. You may NOT re-upload the compiled `.exe` or source code to your own website/repo and claim it as your own original creation.
+(The MIT license requires you to preserve the original copyright header).
+
 ## Usage
 ```
 iconake.exe              play
