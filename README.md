@@ -19,7 +19,7 @@ Pure C. One file. No CRT. Nothing but the OS itself. Tested on Windows 11.
 - Handles Win10 19H1+/Win11 desktop topology (Progman / WorkerW / SHELLDLL_DefView)
 
 ## 📺 Content Creator & Showcase Policy
-You are free to feature this project in your video or streams. However, **you must not claim you wrote this software**. 
+You are free to feature this project in your video or stream. However, **you must not claim you wrote this software**. 
 
 **Requirements for showcasing:**
 1. You must credit "qb-ed" (pronounced "cubed") verbally or in the description.
