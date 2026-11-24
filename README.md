@@ -2,7 +2,7 @@
 
 **Snake, played with your Windows desktop icons.** The snake *is* your icons: they glide across the desktop, eat a wobbling food icon, and grow. When the game ends, your layout is put back exactly as it was.
 
-Pure C. One file. No CRT. Nothing but the OS itself. Tested on Windows 11.
+Pure C. One file. No CRT. Tested on Windows 11 (25H2).
 
 ![demo](demo.gif)
 
