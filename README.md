@@ -38,7 +38,7 @@ Requirements: Windows 10 19H1+ / Windows 11, at least 5 desktop icons.
 
 ## Build
 ```
-clang iconake.c -o iconake.exe -Os -flto -s -ffreestanding -fno-builtin -fno-stack-protector -mno-stack-arg-probe -fno-asynchronous-unwind-tables -fno-ident -ffunction-sections -fdata-sections -nostdlib -Wl,--entry,entry -Wl,--subsystem,windows -Wl,--gc-sections -lkernel32 -luser32 -lole32 -lwinmm
+clang -target=x86_64-windows-gnu iconake.c -o iconake.exe -Os -flto -s -ffreestanding -fno-builtin -fno-stack-protector -mno-stack-arg-probe -fno-asynchronous-unwind-tables -fno-ident -ffunction-sections -fdata-sections -nostdlib -Wl,--entry,entry -Wl,--subsystem,windows -Wl,--gc-sections -lkernel32 -luser32 -lole32 -lwinmm
 ```
 
 ## How it works
